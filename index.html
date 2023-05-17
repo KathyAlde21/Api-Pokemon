@@ -14,46 +14,77 @@
 <body>
     
     <header>
-        <h1 class="text-center">Encuentra un Pokemon</h1>
+        <h1 id="titulo"><b>Encuentra un Pokemon</b></h1>
     </header>
     <main>
-        <div class="container">
-            <section>
+        <section>
+            <div class="container mt-3">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6">
                         <form id="formPokemon">
                             <label for="idPokemon" class="form-label">ID / Nombre</label>
-                            <input type="text" class="form-control my-2"  name="idPokemon" id="idPokemon">
+                            <input type="text" class="form-control my-2" name="idPokemon" id="idPokemon" required>
                             <div class="d-flex justify-content-center">
-                                <input type="text" class="form-control btn btn-primary w-25" value="buscar">
+                                <input type="submit" class="form-control btn btn-primary w-25" value="buscar">
                             </div>
                         </form>        
                     </div>
                 </div>
-            </section>
-            <section>
-                <h3 class="text-center">Información del Pokemon</h3>
-                <section>
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4 py-3">
-                            <div class="card mx-auto" style="width: 18rem;">
-                                <img src="assets/img/imgPokemon.png" class="card-img-top" alt="pokemon">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre: <span id="pesoPokemon"></span></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="#" class="btn btn-primary justify-content-center">Go somewhere</a>
-                                    </div>
-                                </div>
-                              </div>    
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <h3 id="tituloDos"><b>Información del Pokémon</b></h3>
+            <div class="container align-content-center w-50 py-3">
+                    <div class="card mx-auto" id="cardPokemon">
+                        <img id="imagenPokemon" src="assets/img/imgPokemon.png" class="card-img-top" alt="pokemon">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre: <span id="nombrePokemon"></span></h5>
+                            <p class="card-text">Peso: <span id="pesoPokemon"></span></p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary " id="btnAgregarPokemon">Agregar a mi pokédex</a>
+                            </div>
                         </div>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <div class="container">
+                <h3 id="titulo"><b>Listado de mis pokémones</b></h3>
+                <div class="row">
+                    <h4>Filtrar pokémones</h4>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="searchNombrePokemon" placeholder="Nombre Pokémon">    
                     </div>
-                </section>
-            </section>
-        
-        
-        </div>
+                </div>    
+            </div>
+            <br>
+            <div class="container">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Pokedex</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Peso</th>
+                          </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaPokemones">
+                          <!-- <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+            </div>
+        </section>
+        <br><br><br>
     </main>
+    <div id="enBlanco"></div>
     
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
